@@ -1,12 +1,17 @@
-import { UserButton, auth } from "@clerk/nextjs";
-import Image from "next/image";
+"use client";
+import Navbar from "@/components/Navbar/page";
 
-export default function Home() {
-  const { userId } = auth();
+import { UserButton, auth } from "@clerk/nextjs";
+import Dashboardpage from "@/components/DashboardPage/page";
+
+export default function Dashboard() {
   return (
     <div>
-      <UserButton />
-      {userId ? "Tebrikler girişiniz başarılı" : "Giriş başarısız"}
+      <div className="flex justify-around bg-red-400 p-10 ">
+        <Navbar />
+        <UserButton />
+      </div>
+      <Dashboardpage />
     </div>
   );
 }
