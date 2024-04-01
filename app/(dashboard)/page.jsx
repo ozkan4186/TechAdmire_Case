@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar/page";
 
 import { UserButton, auth } from "@clerk/nextjs";
-import Dashboardpage from "@/components/DashboardPage/page";
+import Home from "@/components/Home/page";
 
 export default function Dashboard() {
   return (
@@ -11,7 +11,7 @@ export default function Dashboard() {
         <Navbar />
         <UserButton />
       </div>
-      <Dashboardpage />
+      <Home />
     </div>
   );
 }
