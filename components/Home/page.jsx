@@ -63,87 +63,134 @@ const Home = () => {
       <h1 className="text-center text-3xl text-red-500 ">
         Filtrelenmiş Başvuru Listesi
       </h1>
-      <div>
-        <select
-          onChange={(e) => setFilters({ ...filters, country: e.target.value })}
-        >
-          <option value="">Tüm Ülkeler</option>
-          {Array.from(
-            new Set(applicationsData.map((application) => application.country))
-          ).map((country) => (
-            <option key={country} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
+      <div className="flex flex-wrap border border-gray-100">
+        {/* Ülke filtresi */}
+        <div className="w-full p-2">
+          <label className="block mb-1">Ülke</label>
+          <select
+            className="w-full border rounded-md p-1"
+            onChange={(e) =>
+              setFilters({ ...filters, country: e.target.value })
+            }
+          >
+            <option value="">Tüm Ülkeler</option>
+            {Array.from(
+              new Set(
+                applicationsData.map((application) => application.country)
+              )
+            ).map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <select
-          onChange={(e) =>
-            setFilters({ ...filters, university: e.target.value })
-          }
-        >
-          <option value="">Tüm Üniversiteler</option>
-          {Array.from(
-            new Set(
-              applicationsData.map((application) => application.university)
-            )
-          ).map((university) => (
-            <option key={university} value={university}>
-              {university}
-            </option>
-          ))}
-        </select>
+        {/* Üniversite filtresi */}
+        <div className="w-full p-2">
+          <label className="block mb-1">Üniversite</label>
+          <select
+            className="w-full border rounded-md p-1"
+            onChange={(e) =>
+              setFilters({ ...filters, university: e.target.value })
+            }
+          >
+            <option value="">Tüm Üniversiteler</option>
+            {Array.from(
+              new Set(
+                applicationsData.map((application) => application.university)
+              )
+            ).map((university) => (
+              <option key={university} value={university}>
+                {university}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Süre filtresi */}
-        <select
-          onChange={(e) => setFilters({ ...filters, duration: e.target.value })}
-        >
-          <option value="">Tüm Süreler</option>
-          {Array.from({ length: 8 }, (_, i) => i + 1).map((year) => (
-            <option key={year} value={year}>
-              {year} yıl
-            </option>
-          ))}
-        </select>
+        <div className="w-full p-2">
+          <label className="block mb-1">Süre</label>
+          <select
+            className="w-full border rounded-md p-1"
+            onChange={(e) =>
+              setFilters({ ...filters, duration: e.target.value })
+            }
+          >
+            <option value="">Tüm Süreler</option>
+            {Array.from({ length: 8 }, (_, i) => i + 1).map((year) => (
+              <option key={year} value={year}>
+                {year} yıl
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Dil filtresi */}
-        <select
-          onChange={(e) => setFilters({ ...filters, language: e.target.value })}
-        >
-          <option value="">Tüm Diller</option>
-          {["English", "French", "Turkish"].map((language) => (
-            <option key={language} value={language}>
-              {language}
-            </option>
-          ))}
-        </select>
+        <div className="w-full p-2">
+          <label className="block mb-1">Dil</label>
+          <select
+            className="w-full border rounded-md p-1"
+            onChange={(e) =>
+              setFilters({ ...filters, language: e.target.value })
+            }
+          >
+            <option value="">Tüm Diller</option>
+            {["English", "French", "Turkish"].map((language) => (
+              <option key={language} value={language}>
+                {language}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Maliyet aralığı filtresi */}
-        <input
-          type="number"
-          placeholder="Min Maliyet"
-          onChange={(e) => setFilters({ ...filters, minCost: e.target.value })}
-        />
-        <input
-          type="number"
-          placeholder="Max Maliyet"
-          onChange={(e) => setFilters({ ...filters, maxCost: e.target.value })}
-        />
-        {/* Sıralama */}
-        <select onChange={(e) => setSortOption(e.target.value)}>
-          <option value="">Sırala</option>
-          <option value="lowestPrice">En Düşük Fiyat</option>
-          <option value="highestPrice">En Yüksek Fiyat</option>
-          <option value="deadline">Son Başvuru Tarihi</option>
-        </select>
+        <div className="w-full p-2">
+          <label className="block mb-1">Maliyet Aralığı</label>
+          <input
+            type="number"
+            className="w-full border rounded-md p-1"
+            placeholder="Min Maliyet"
+            onChange={(e) =>
+              setFilters({ ...filters, minCost: e.target.value })
+            }
+          />
+          <input
+            type="number"
+            className="w-full border rounded-md p-1"
+            placeholder="Max Maliyet"
+            onChange={(e) =>
+              setFilters({ ...filters, maxCost: e.target.value })
+            }
+          />
+        </div>
+
+        {/* Sıralama seçeneği */}
+        <div className="w-full p-2">
+          <label className="block mb-1">Sırala</label>
+          <select
+            className="w-full border rounded-md p-1"
+            onChange={(e) => setSortOption(e.target.value)}
+          >
+            <option value="">Sırala</option>
+            <option value="lowestPrice">En Düşük Fiyat</option>
+            <option value="highestPrice">En Yüksek Fiyat</option>
+            <option value="deadline">Son Başvuru Tarihi</option>
+          </select>
+        </div>
       </div>
 
       {/* Sayfalama */}
-      <div className="flex flex-wrap justify-center ">
+      <div className="flex flex-wrap justify-center gap-3 ">
         {paginatedApplications.map((application) => (
           <div
             key={application.name}
             class="  max-w-sm rounded overflow-hidden shadow-lg"
           >
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <div className="font-bold text-xl mb-2">
+                Students Application System
+              </div>
               <p className="text-gray-700 text-base" />
 
               <p>Adı: {application.name}</p>
