@@ -62,7 +62,8 @@ SOLUTION
 ```
 ## Screenshot
 <p align="left">
-<a href="https://main--bright-muffin-babc9e.netlify.app/"><img src="screen.gif" alt="screenshot" target=_blanked></a>
+![Animation3](https://github.com/ozkan4186/TechAdmire_Case/assets/109352349/12110862-a6f2-40ee-afc4-d09d80f94ea2)
+
 </p>
 
 ## Links
