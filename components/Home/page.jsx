@@ -193,13 +193,43 @@ const Home = () => {
               </div>
               <p className="text-gray-700 text-base" />
 
-              <p>Adı: {application.name}</p>
-              <p>Üniversite: {application.university}</p>
-              <p>Ülke: {application.country}</p>
-              <p>Süre: {application.duration} yıl</p>
-              <p>Maliyet: ${application.cost}</p>
-              <p>Son Başvuru Tarihi: {application.deadline}</p>
-              <p>Dil: {application.language}</p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Adı:</span>{" "}
+                {application.name}
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Üniversite:</span>{" "}
+                {application.university}
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Ülke:</span>{" "}
+                {application.country}
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Süre:</span>{" "}
+                {application.duration} yıl
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Maliyet:</span> $
+                {application.cost}
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">
+                  Son Başvuru Tarihi:
+                </span>{" "}
+                {application.deadline}
+              </p>
+              <p>
+                {" "}
+                <span className="text-xl text-red-600 ">Dil:</span>{" "}
+                {application.language}
+              </p>
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
