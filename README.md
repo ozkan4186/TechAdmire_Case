@@ -62,8 +62,9 @@ SOLUTION
 ```
 ## Screenshot
 <p align="left">
-![Animation3](https://github.com/ozkan4186/TechAdmire_Case/assets/109352349/39d291a0-dd13-48bc-9b63-6d4a8ff7d1bc)
 
+<a href="https://main--bright-muffin-babc9e.netlify.app/"><img src="![Animation3](https://github.com/ozkan4186/TechAdmire_Case/assets/109352349/7e8f56a6-509d-4f8b-b956-0caef38681b3)
+.gif" alt="screenshot" target=_blanked></a>
 
 </p>
 
