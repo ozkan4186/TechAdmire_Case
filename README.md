@@ -62,7 +62,8 @@ SOLUTION
 ```
 ## Screenshot
 <p align="left">
-[(https://github.com/ozkan4186/TechAdmire_Case/assets/109352349/12110862-a6f2-40ee-afc4-d09d80f94ea2)]
+![Animation3](https://github.com/ozkan4186/TechAdmire_Case/assets/109352349/39d291a0-dd13-48bc-9b63-6d4a8ff7d1bc)
+
 
 </p>
 
